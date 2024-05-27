@@ -78,21 +78,19 @@ router.get('/user', (req, res) => {
             },
         ],
     };
-    res.status(200);
-    res.json(user);
+    setTimeout(() => {
+        res.status(200);
+        res.json(user);
+    }, 700);
 });
 
 router.get('/photo', (req, res) => {
     const email = req.query.email;
-
-    // Validate email query param
     if (!email) {
         return res
             .status(400)
             .json({ error: 'Email query parameter is required' });
     }
-
-    // Read the photo file
     const photoPath = path.join(__dirname, '../public/photo.jpg');
     fs.readFile(photoPath, (err, data) => {
         if (err) {
@@ -100,11 +98,7 @@ router.get('/photo', (req, res) => {
                 .status(500)
                 .json({ error: 'Error reading the photo file' });
         }
-
-        // Convert the photo to base64
         const base64Photo = data.toString('base64');
-
-        // Return the base64 photo
         setTimeout(() => {
             res.status(200);
             res.json(base64Photo);
