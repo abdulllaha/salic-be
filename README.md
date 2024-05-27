@@ -46,23 +46,23 @@ command npm start
 
     -   **Example Response:**
         ```json
-        value: [
+        "value": [
                   {
-                      Id: 1,
-                      IsHiddenInUI: false,
-                      LoginName: 'John Doe',
-                      Title: 'SVP - Information Technology',
-                      PrincipalType: 1,
-                      Email: 'john@example.com',
-                      Expiration: '2024-12-31',
-                      IsEmailAuthenticationGuestUser: false,
-                      IsShareByEmailGuestUser: false,
-                      IsSiteAdmin: true,
-                      UserId: {
-                          NameId: 'johnDoeId',
-                          NameIdIssuer: 'issuer1',
+                      "Id": 1,
+                      "IsHiddenInUI": false,
+                      "LoginName": 'John Doe',
+                      "Title": 'SVP - Information Technology',
+                      "PrincipalType": 1,
+                      "Email": 'john@example.com',
+                      "Expiration": '2024-12-31',
+                      "IsEmailAuthenticationGuestUser": false,
+                      "IsShareByEmailGuestUser": false,
+                      "IsSiteAdmin": true,
+                      "UserId": {
+                          "NameId": 'johnDoeId',
+                          "NameIdIssuer": 'issuer1',
                       },
-                      UserPrincipalName: 'johnDoe@example.com',
+                      "UserPrincipalName": 'johnDoe@example.com',
                   },
         ]
         ```
