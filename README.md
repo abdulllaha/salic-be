@@ -46,25 +46,25 @@ command npm start
 
     -   **Example Response:**
         ```json
-        "value": [
-                  {
-                      "Id": 1,
-                      "IsHiddenInUI": false,
-                      "LoginName": 'John Doe',
-                      "Title": 'SVP - Information Technology',
-                      "PrincipalType": 1,
-                      "Email": 'john@example.com',
-                      "Expiration": '2024-12-31',
-                      "IsEmailAuthenticationGuestUser": false,
-                      "IsShareByEmailGuestUser": false,
-                      "IsSiteAdmin": true,
-                      "UserId": {
-                          "NameId": 'johnDoeId',
-                          "NameIdIssuer": 'issuer1',
-                      },
-                      "UserPrincipalName": 'johnDoe@example.com',
-                  },
-        ]
+           "value": [
+            {
+              "Id": 1,
+              "IsHiddenInUI": false,
+              "LoginName": "John Doe",
+              "Title": "SVP - Information Technology",
+              "PrincipalType": 1,
+              "Email": "john@example.com",
+              "Expiration": "2024-12-31",
+              "IsEmailAuthenticationGuestUser": false,
+              "IsShareByEmailGuestUser": false,
+              "IsSiteAdmin": true,
+              "UserId": {
+                "NameId": "johnDoeId",
+                "NameIdIssuer": "issuer1"
+              },
+              "UserPrincipalName": "johnDoe@example.com"
+            }
+          ]
         ```
 
 1.  **Endpoint:** `/api/photo?email=${email}`
