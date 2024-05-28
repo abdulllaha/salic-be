@@ -1,22 +1,16 @@
-export interface UserId {
-  NameId: string;
-  NameIdIssuer: string;
+export interface OtherId {
+  id: string;
+    issuerId: string;
 }
 export interface ResponseWrapper<T> {
   value: T
 }
 
 export interface User {
-  Id: number;
-  IsHiddenInUI: boolean;
-  LoginName: string;
-  Title: string;
-  PrincipalType: number;
-  Email: string;
-  Expiration: string;
-  IsEmailAuthenticationGuestUser: boolean;
-  IsShareByEmailGuestUser: boolean;
-  IsSiteAdmin: boolean;
-  UserId: UserId;
-  UserPrincipalName: string;
+ id: number;
+  name: string;
+  email: string;
+  title: string;
+  otherId: OtherId;
+  partName: string;
 }

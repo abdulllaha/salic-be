@@ -7,75 +7,51 @@ const router = Router();
 
 router.get('/user', (req, res) => {
     const user: ResponseWrapper<User[]> = {
-        value: [
-            {
-                Id: 1,
-                IsHiddenInUI: false,
-                LoginName: 'John Doe',
-                Title: 'SVP - Information Technology',
-                PrincipalType: 1,
-                Email: 'john@example.com',
-                Expiration: '2024-12-31',
-                IsEmailAuthenticationGuestUser: false,
-                IsShareByEmailGuestUser: false,
-                IsSiteAdmin: true,
-                UserId: {
-                    NameId: 'johnDoeId',
-                    NameIdIssuer: 'issuer1',
-                },
-                UserPrincipalName: 'johnDoe@example.com',
+        value:[
+          {
+            id: 1,
+            name: "John Doe",
+            email: "john.doe@example.com",
+            title: "Manager",
+            otherId: {
+              id: "A123",
+              issuerId: "Issuer1"
             },
-            {
-                Id: 2,
-                IsHiddenInUI: true,
-                LoginName: 'Jane Smith',
-                Title: 'Director of Human Resources',
-                PrincipalType: 2,
-                Email: 'jane@example.com',
-                Expiration: '2024-11-30',
-                IsEmailAuthenticationGuestUser: true,
-                IsShareByEmailGuestUser: true,
-                IsSiteAdmin: false,
-                UserId: {
-                    NameId: 'janeSmithId',
-                    NameIdIssuer: 'issuer2',
-                },
-                UserPrincipalName: 'janeSmith@example.com',
+            partName: "Part A"
+          },
+          {
+            id: 2,
+            name: "Jane Smith",
+            email: "jane.smith@example.com",
+            title: "Developer",
+            otherId: {
+              id: "B456",
+              issuerId: "Issuer2"
             },
-            {
-                Id: 3,
-                IsHiddenInUI: false,
-                LoginName: 'Bob Brown',
-                Title: 'Chief Financial Officer',
-                PrincipalType: 3,
-                Email: 'bob@example.com',
-                Expiration: '2023-10-15',
-                IsEmailAuthenticationGuestUser: false,
-                IsShareByEmailGuestUser: true,
-                IsSiteAdmin: true,
-                UserId: {
-                    NameId: 'bobBrownId',
-                    NameIdIssuer: 'issuer3',
-                },
-                UserPrincipalName: 'bobBrown@example.com',
+            partName: "Part B"
+          },
+          {
+            id: 3,
+            name: "Alice Johnson",
+            email: "alice.johnson@example.com",
+            title: "Designer",
+            otherId: {
+              id: "C789",
+              issuerId: "Issuer3"
             },
-            {
-                Id: 4,
-                IsHiddenInUI: true,
-                LoginName: 'Alice Johnson',
-                Title: 'Marketing Manager',
-                PrincipalType: 4,
-                Email: 'alice@example.com',
-                Expiration: '2025-01-20',
-                IsEmailAuthenticationGuestUser: true,
-                IsShareByEmailGuestUser: false,
-                IsSiteAdmin: false,
-                UserId: {
-                    NameId: 'aliceJohnsonId',
-                    NameIdIssuer: 'issuer4',
-                },
-                UserPrincipalName: 'aliceJohnson@example.com',
+            partName: "Part C"
+          },
+          {
+            id: 4,
+            name: "Bob Brown",
+            email: "bob.brown@example.com",
+            title: "Analyst",
+            otherId: {
+              id: "D012",
+              issuerId: "Issuer4"
             },
+            partName: "Part D"
+          },
         ],
     };
     setTimeout(() => {

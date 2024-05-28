@@ -47,23 +47,17 @@ command npm start
     -   **Example Response:**
         ```json
            "value": [
-            {
-              "Id": 1,
-              "IsHiddenInUI": false,
-              "LoginName": "John Doe",
-              "Title": "SVP - Information Technology",
-              "PrincipalType": 1,
-              "Email": "john@example.com",
-              "Expiration": "2024-12-31",
-              "IsEmailAuthenticationGuestUser": false,
-              "IsShareByEmailGuestUser": false,
-              "IsSiteAdmin": true,
-              "UserId": {
-                "NameId": "johnDoeId",
-                "NameIdIssuer": "issuer1"
+                      {
+              "id": 1,
+              "name": "John Doe",
+              "email": "john.doe@example.com",
+              "title": "Manager",
+              "otherId": {
+                "id": "A123",
+                "issuerId": "Issuer1"
               },
-              "UserPrincipalName": "johnDoe@example.com"
-            }
+              "partName": "Part A"
+            },
           ]
         ```
 
